@@ -11,19 +11,18 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Student student = new Student("Margherita", 29);
-        List<Student> list = Arrays.asList(student);
+        List<Student> list = new ArrayList<>(Arrays.asList(student));
 
         System.out.println("Studente: " + list);
 
-        List<String> lista1 = new ArrayList<>();
-        lista1.add(student.name);
-        lista1.add(String.valueOf(student.age));
-        lista1.add("H 1.60");
-        lista1.add("Occhi marroni");
-        lista1.add("Capelli castani");
-        lista1.add("id: 934");
+        //List<String> lista1 = new ArrayList<>();
 
-        System.out.println("Studente aggiornato: " + lista1);
+        list.add(new Student("Nicola", 30));
+        list.add(new Student("Gabriele", 26));
+        list.add(new Student("Simone", 25));
+
+
+        System.out.println("Studente aggiornato: " + list);
     }
 }
 
